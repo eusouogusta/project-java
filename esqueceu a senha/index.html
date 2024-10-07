@@ -1,0 +1,70 @@
+<!-- html/index.html -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ['class'],
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))'
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))'
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))'
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))'
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))'
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))'
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))'
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="flex flex-col items-center justify-center min-h-screen bg-background text-foreground relative">
+      <button id="toggle-dark-mode" class="absolute top-4 right-4 bg-secondary text-secondary-foreground p-2 rounded">
+        Toggle Dark Mode
+      </button>
+      <h1 class="text-4xl font-bold mb-4">Esqueci a senha</h1>
+      <label class="text-lg mb-2">EMAIL</label>
+      <input type="email" placeholder="exemplo@gmail.com" class="border border-muted rounded-lg p-2 mb-4 w-80" />
+      <button class="bg-primary text-primary-foreground hover:bg-primary/80 rounded-lg p-2 mb-4 w-80">sign up</button>
+      <a href="#" class="flex items-center text-secondary text-lg">
+        <span class="material-icons">arrow_back</span>
+        <span class="ml-2">Voltar</span>
+      </a>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
